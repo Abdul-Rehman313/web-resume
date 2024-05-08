@@ -1,0 +1,19 @@
+.zoom {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.zoom:hover {
+  color: #3333ff;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sticky-navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4caf50;
+}
