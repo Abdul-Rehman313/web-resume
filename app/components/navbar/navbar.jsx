@@ -60,15 +60,11 @@ const Navbar = () => {
             <Link href="#experience">
               <Text className="zoom">Experience</Text>
             </Link>
-
             <Link href="#portfolio">
               <Text className="zoom">Portfolio</Text>
             </Link>
             <Link href="#certificate">
               <Text className="zoom">Certificate</Text>
-            </Link>
-            <Link href="/problem">
-              <Text className="zoom" >Problem</Text>
             </Link>
           </Flex>
         </Flex>

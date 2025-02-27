@@ -1,11 +1,24 @@
 "use client";
 import React from "react";
-import { Divider, Flex, Text, Image, Avatar } from "@chakra-ui/react";
+import {
+  Divider,
+  Flex,
+  Text,
+  Image,
+  Avatar,
+  Box,
+  List,
+  ListItem,
+  ListIcon,
+  UnorderedList,
+  Button,
+} from "@chakra-ui/react";
 import Link from "next/link.js";
 
 import { SKILLS, EXPERIENCE, PORTFOLIOS } from "./constant.js";
 
 import "./homepage.css";
+import { CheckCircleIcon } from "@chakra-ui/icons";
 
 const HomePage = () => {
   return (
@@ -52,21 +65,25 @@ const HomePage = () => {
             </Text>
             <Text p="16px 0px" fontSize="16px" textAlign="justify">
               {` 
-Welcome to the forefront of software innovation! As an Associate Software Engineer , I bring fresh perspectives and a hunger for learning to the table. With 6 months of hands-on experience in frontend development, particularly with technologies like Next.js and React.js, I am on a journey to expand my skills into the realm of MERN stack development. My passion lies in crafting sleek and user-friendly interfaces that elevate digital experiences. While I may be at the beginning of my career, my dedication and enthusiasm drive me to continuously grow and contribute to our team's success. In the dynamic domains of software development, I see every challenge as an opportunity to turn your visions into reality with precision and dedication.`}
+Welcome to the forefront of software innovation! As an Associate Software Engineer, I bring a fresh perspective, a problem-solving mindset, and a passion for continuous learning. With over a year of hands-on experience in frontend development, particularly with Next.js and React.js, I have honed my skills in building sleek, user-friendly interfaces that enhance digital experiences. My journey has also expanded into full-stack MERN development, allowing me to work seamlessly across both frontend and backend technologies. I thrive in dynamic environments, tackling challenges with precision and dedication, and I am committed to contributing to our team's success by turning ideas into impactful software solutions.`}
             </Text>
             <Flex gap="70px">
               <Flex direction="column" gap="11px">
                 <Text className="info">Phone:</Text>
                 <Text className="info">Email:</Text>
                 <Text className="info">Address:</Text>
+                <Text className="info">LinkedIn:</Text>
               </Flex>
               <Flex direction="column" gap="5px">
                 <Text className="info-contact">0303-5232873</Text>
                 <Text className="info-contact">abdulrm99@gmail.com</Text>
                 <Text className="info-contact">Lahore, Pakistan</Text>
+                <Text className="info-contact">
+                  linkedin.com/in/abdul-rehman-a27a1719a/
+                </Text>
               </Flex>
             </Flex>
-            {/* <Flex gap="5px" p="16px 0px">
+            <Flex gap="5px" p="16px 0px">
               <Button w="170px" fontSize="12px">
                 DOWNLOAD CV
               </Button>
@@ -76,11 +93,11 @@ Welcome to the forefront of software innovation! As an Associate Software Engine
                 color="#FFF"
                 fontSize="12px"
                 _hover={{ bg: "#3333ff", color: "#FFF" }}
-                onClick={() => emailSend()}
+                // onClick={() => emailSend()}
               >
                 CONTACT
               </Button>
-            </Flex> */}
+            </Flex>
           </Flex>
         </Flex>
       </Flex>
@@ -110,17 +127,17 @@ Welcome to the forefront of software innovation! As an Associate Software Engine
               Skills<span style={{ color: "#3333ff" }}>.</span>
             </Text>
             <Text fontSize="16px" color="#252525" lineHeight="1.56">
-              With 6 months of dedicated experience in frontend development, I
-              specialize in crafting intuitive, visually appealing, and
-              responsive user interfaces. My expertise encompasses designing and
+              With over a year of dedicated experience in frontend development,
+              I specialize in crafting intuitive, visually appealing, and
+              responsive user interfaces. My expertise lies in designing and
               implementing elegant solutions that enhance user experiences while
               ensuring seamless functionality across various platforms and
-              devices. I am adept at leveraging modern frameworks and
-              technologies to create dynamic web applications that meet the
-              evolving needs of the digital landscape. I bring a proven track
-              record of delivering high-quality frontend solutions that are both
-              innovative and user-centric, aligning closely with the dynamic
-              demands of today's digital world.
+              devices. I have honed my skills in leveraging modern frameworks
+              like Next.js and React.js to build dynamic, high-performance web
+              applications that align with the evolving demands of the digital
+              landscape. With a strong focus on innovation and user-centric
+              design, I am committed to delivering high-quality solutions that
+              drive engagement and efficiency
             </Text>
           </Flex>
           <Flex
@@ -175,10 +192,11 @@ Welcome to the forefront of software innovation! As an Associate Software Engine
               Experience<span style={{ color: "#3333ff" }}>.</span>
             </Text>
             <Text fontSize="16px" color="#252525" lineHeight="1.56">
-              With nearly eight months of dedicated service at Geekybugs, I have
-              fostered a positive work environment while refining my skills in
-              areas. I have actively pursued opportunities for growth, engaging
-              in training programs and certifications to expand my expertise.
+              With over a year of dedicated service at GeekyBugs, I have
+              fostered a positive work environment while continuously refining
+              my skills. I have actively pursued opportunities for growth,
+              engaging in training programs and certifications to expand my
+              expertise and contribute effectively to the team.
             </Text>
           </Flex>
           <Flex
@@ -215,6 +233,25 @@ Welcome to the forefront of software innovation! As an Associate Software Engine
                 </Flex>
               );
             })}
+            <UnorderedList spacing={3}>
+              <ListItem>
+                Collaborated with design teams to refine UI/UX flows and
+                effectively communicate client requirements.
+              </ListItem>
+              <ListItem>
+                Orchestrated old frontend view of applications into a
+                pixel-perfect web app using modern frameworks React.js and
+                Next.js.
+              </ListItem>
+              <ListItem>
+                Collaborated with the backend team to design and integrate APIs
+                with the frontend.
+              </ListItem>
+              <ListItem>
+                Reviewing codes, debugging errors in legacy systems,
+                implementing best practices, and ensuring optimized solutions.
+              </ListItem>
+            </UnorderedList>
           </Flex>
         </Flex>
       </Flex>
@@ -283,6 +320,9 @@ Welcome to the forefront of software innovation! As an Associate Software Engine
                   >
                     {data.description}
                   </Text>
+                  <UnorderedList spacing={3}>
+                    <ListItem>{data.about}</ListItem>
+                  </UnorderedList>
                 </Flex>
               );
             })}
