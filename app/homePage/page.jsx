@@ -6,12 +6,8 @@ import {
   Text,
   Image,
   Avatar,
-  Box,
-  List,
   ListItem,
-  ListIcon,
   UnorderedList,
-  Button,
 } from "@chakra-ui/react";
 import Link from "next/link.js";
 
@@ -57,7 +53,7 @@ const HomePage = () => {
               height={{ md: "211px", lg: "330px" }}
               width={{ md: "211px", lg: "330px" }}
               borderRadius="100%"
-            /> */}
+            />  */}
           </Flex>
           <Flex direction="column" w={{ base: "full", md: "70%" }}>
             <Text fontSize="36px" fontWeight="700">
@@ -83,7 +79,7 @@ Welcome to the forefront of software innovation! As an Associate Software Engine
                 </Text>
               </Flex>
             </Flex>
-            <Flex gap="5px" p="16px 0px">
+            {/* <Flex gap="5px" p="16px 0px">
               <Button w="170px" fontSize="12px">
                 DOWNLOAD CV
               </Button>
@@ -97,7 +93,7 @@ Welcome to the forefront of software innovation! As an Associate Software Engine
               >
                 CONTACT
               </Button>
-            </Flex>
+            </Flex> */}
           </Flex>
         </Flex>
       </Flex>
